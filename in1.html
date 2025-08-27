@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory management</title>
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmXRKa7yidFaLvmxPktbQHyyrDyUhlqzSh5A&s" type="image/x-icon">
+</head>
+<style>
+  /* Basic body reset */
+  body {
+    margin: 0;
+    font-family: sans-serif;
+  }
+
+  /* The main black navigation bar */
+  nav {
+    background-color: black;
+    padding: 0 20px; /* Add some padding on the sides */
+  }
+
+  /* This is the flex container that aligns your links */
+  .nav-container {
+    display: flex; /* Aligns items in a row */
+    align-items: center; /* Vertically centers the items */
+    list-style: none; /* Removes bullet points */
+    height: 50px;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Styling for the links */
+  .nav-container a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 0 50px; /* Add space around links instead of a large margin */
+  }
+  
+  /* THIS IS THE KEY: Pushes the logout link to the far right */
+  .logout {
+    margin-left: auto; 
+  }
+  
+
+
+
+  
+
+</style>
+
+
+ <nav>
+    <ul class="nav-container">
+      <li><a href="#">Master List</a></li>
+      <li><a href="#">Receipt</a></li>
+      <li><a href="#">Withdrawals</a></li>
+      <li><a href="#">Queries</a></li>
+      <li class="logout"><a href="#">Log out</a></li>
+    </ul>
+  </nav>
+
+
+<body>
+    
+ 
+
+
+   <form id="inventory-form">
+    <input type="text" id="item-name" placeholder="Item Name" required/>
+    <input type="number" id="item-qty" placeholder="Quantity" required/>
+    <input type="number" id="item-price" placeholder="Price" step="0.01" required/>
+    <button type="submit">Add Item</button>
+  </form>
+  <table id="inventory-table">
+
+
+    <thead>
+      <tr><th>Name</th><th>Quantity</th><th>Price</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
